@@ -1,11 +1,12 @@
 import Default from '../Frame/Default/Default'
-import Listen from '../Frame/Listen/Daze/Daze'
+import Listen from '../Frame/Listen/Listen'
 import Download from '../Frame/Download/Download'
 import Credits from '../Frame/Credits/Credits'
 import Contact from '../Frame/Contact/Contact'
 
 interface dogDaysProps {
-    isSelected: string
+    isSelected: string,
+    isSongSelected: string
 }
 
 const Frame: React.FC<dogDaysProps> = (props) => {
@@ -18,7 +19,7 @@ const Frame: React.FC<dogDaysProps> = (props) => {
                     <Default />
                     :
                     props.isSelected === 'LISTEN' ?
-                    <Listen />
+                    <Listen isSongSelected={props.isSongSelected} />
                     :
                     props.isSelected === 'DOWNLOAD' ?
                     <Download />

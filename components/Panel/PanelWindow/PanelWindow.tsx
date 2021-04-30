@@ -1,4 +1,3 @@
-import DogDays from "../../Frame/Listen/DogDays/DogDays"
 import DefaultPanel from './DefaultPanel/DefaultPanel'
 import ListenPanel from './ListenPanel/ListenPanel'
 import CreditsPanel from './CreditsPanel/CreditsPanel'
@@ -6,7 +5,8 @@ import DownloadPanel from './DownloadPanel/DownloadPanel'
 import ContactPanel from './ContactPanel/ContactPanel'
 
 interface dogDaysProps {
-    isSelected: string
+    isSelected: string,
+    setIsSongSelected: any
 }
 
 const PanelWindow: React.FC<dogDaysProps> = (props) => {
@@ -17,7 +17,7 @@ const PanelWindow: React.FC<dogDaysProps> = (props) => {
                 <DefaultPanel />
                 :
                 props.isSelected === 'LISTEN' ?
-                <ListenPanel />
+                <ListenPanel setIsSongSelected={props.setIsSongSelected}/>
                 :
                 props.isSelected === 'DOWNLOAD' ?
                 <DownloadPanel />
