@@ -1,7 +1,7 @@
 const DefaultPanel = () => {
     return (
-        <div>
-            <h1>Default Panel</h1>
+        <div className="default-panel">
+            <img src="/images/panel/young-planet-logo.png" alt="Young Planet | Logo" />
         </div>
     )
 }
