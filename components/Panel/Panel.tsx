@@ -1,7 +1,12 @@
 import { useState } from "react"
+import PanelWindow from './PanelWindow/PanelWindow'
 
-const Panel: React.FC = () => {
-    const [ isSelected, setIsSelected ] = useState<string>('')
+interface dogDaysProps {
+    isSelected: string,
+    setIsSelected: any
+}
+
+const Panel: React.FC<dogDaysProps> = (props) => {
 
     const btns = [
         {
@@ -19,7 +24,7 @@ const Panel: React.FC = () => {
     ]
 
     function storeSelected(e) {
-        setIsSelected(e.target.innerText)
+        props.setIsSelected(e.target.innerText)
     }
 
     return (
@@ -27,15 +32,14 @@ const Panel: React.FC = () => {
             <div className="panel__btn-container">
                 {
                     btns.map((btn, id) => {
-                        return isSelected === btn.text ?
+                        return props.isSelected === btn.text ?
                             <button className="selected" onClick={storeSelected} key={id}>{btn.text}</button>
                             :
                             <button onClick={storeSelected} key={id}>{btn.text}</button>
                     })
                 }
             </div>
-            <div className="panel__window">
-            </div>
+            <PanelWindow isSelected={props.isSelected} />
         </section>
     )
 }

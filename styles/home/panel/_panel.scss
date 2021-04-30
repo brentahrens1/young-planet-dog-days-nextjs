@@ -9,7 +9,7 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     position: relative;
-    z-index: 1;
+    z-index: 999;
 
     &__btn-container {
         width: 85%;
@@ -52,7 +52,7 @@
         }
     }
 
-    &__window {
+    .panel-window {
         width: 85%;
         height: 500px;
         background: $greyLight;

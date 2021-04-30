@@ -1,3 +1,5 @@
+@import './default/default';
+
 .frame {
     width: 70%;
     height: 100%;
@@ -15,12 +17,23 @@
         }
     }
 
-    .frame {
-        z-index: 9;
+    .frame-border {
+        z-index: 999;
         box-shadow: 10px 5px 7px rgba(36, 39, 40, .3);
+
+        img {
+            z-index: 999;
+        }
     }
 
     .background {
         z-index: 1;
+    }
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
