@@ -4,8 +4,8 @@ import PanelWindow from './PanelWindow/PanelWindow'
 interface dogDaysProps {
     isSelected: string,
     setIsSelected: any,
-    isSongSelected: string,
-    setIsSongSelected: any
+    setIsSongSelected: any,
+    setIsArtistSelected: any
 }
 
 const Panel: React.FC<dogDaysProps> = (props) => {
@@ -41,7 +41,11 @@ const Panel: React.FC<dogDaysProps> = (props) => {
                     })
                 }
             </div>
-            <PanelWindow isSelected={props.isSelected} setIsSongSelected={props.setIsSongSelected} />
+            <PanelWindow 
+                isSelected={props.isSelected} 
+                setIsSongSelected={props.setIsSongSelected} 
+                setIsArtistSelected={props.setIsArtistSelected}
+            />
         </section>
     )
 }

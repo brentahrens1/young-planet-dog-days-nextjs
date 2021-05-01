@@ -1,0 +1,86 @@
+.credits {
+    &__left-tree {
+        @include left-tree;
+    }
+
+    &__right-tree {
+        @include right-tree;
+    }
+
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 16.7%;
+        width: 15rem;
+        border: 2px solid $dogDaysBlack;
+        animation: slide-right 2s ease;
+        z-index: -1;
+
+        .title, .creds {
+            background: rgba(36, 39, 40, .7);
+            margin: 0;
+        }
+
+        .title {
+            color: $orange;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            padding: .3rem;
+            padding-left: .5rem;
+            border-bottom: 2px solid $dogDaysBlack;
+        }
+
+        .name {
+            text-transform: uppercase;
+            margin: .2rem;
+            padding-right: 1rem;
+            text-align: right;
+        }
+
+        .creds {
+            padding: .5rem;
+            color: #fff;
+            text-align: center;
+            border-top: 2px solid $dogDaysBlack;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        width: 40%;
+        z-index: -1;
+        animation: rise-up 2s ease;
+
+        &.cidida {
+            width: 43%;
+            bottom:1.5%;
+            right: 24%;
+        }
+        &.july {
+            right: 24%;
+        }
+        &.pj {
+            width: 45%;
+            right: 26%;
+            bottom: 24%;
+        }
+        &.dallas {
+            right: 22%;
+            bottom: 23.8%;
+        }
+        &.joe {
+            right: 20%;
+            bottom: 15%;
+        }
+        &.mitch {
+            right: 24%;
+            bottom: 13%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

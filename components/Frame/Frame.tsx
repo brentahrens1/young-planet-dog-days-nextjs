@@ -6,7 +6,8 @@ import Contact from '../Frame/Contact/Contact'
 
 interface dogDaysProps {
     isSelected: string,
-    isSongSelected: string
+    isSongSelected: string,
+    isArtistSelected: string
 }
 
 const Frame: React.FC<dogDaysProps> = (props) => {
@@ -25,7 +26,7 @@ const Frame: React.FC<dogDaysProps> = (props) => {
                     <Download />
                     :
                     props.isSelected === 'CREDITS' ?
-                    <Credits />
+                    <Credits isArtistSelected={props.isArtistSelected} />
                     :
                     props.isSelected === 'CONTACT' ?
                     <Contact />

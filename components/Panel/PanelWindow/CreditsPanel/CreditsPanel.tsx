@@ -1,7 +1,40 @@
-const CreditsPanel = () => {
+interface dogDaysProps {
+    setIsArtistSelected: any
+}
+
+const CreditsPanel: React.FC<dogDaysProps> = (props) => {
+
+    function selectArtist(e) {
+        props.setIsArtistSelected(e.target.innerText)
+    }
+
+    const panelBtns = [
+        {
+            name: 'cidida'
+        },
+        {
+            name: 'july'
+        },
+        {
+            name: 'mitch'
+        },
+        {
+            name: 'dallas'
+        },
+        {
+            name: 'joe'
+        },
+        {
+            name: 'pj'
+        },
+    ]
     return (
         <div>
-            <h1>Credits Panel</h1>
+            {
+                panelBtns.map((btn, id) => {
+                    return <button onClick={selectArtist} key={id}>{btn.name}</button>
+                })
+            }
         </div>
     )
 }
