@@ -15,10 +15,15 @@
         bottom: 25%;
         z-index: -2;
         opacity: 0;
+        transform: translateX(-500px);
     
         &.dog-out {
             animation: slide-right 1s ease;
             opacity: 1;
+        }
+
+        &.dog-back {
+            animation: far-left 3s ease;
         }
 
         img {
@@ -33,6 +38,11 @@
         bottom: 28%;
         z-index: -3;
         animation: paper-fall 2s linear;
+        
+        &.paper-out {
+            animation: far-left 3s ease;
+            transform: translateX(-500px);
+        }
 
         img {
             width: 100%;

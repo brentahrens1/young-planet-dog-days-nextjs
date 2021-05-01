@@ -70,6 +70,15 @@
     }
 }
 
+@keyframes fall-down {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 @keyframes paper-fall {
     0% {
         transform: translateY(-800px) rotateX(10deg);
@@ -100,5 +109,23 @@
     }
     100% {
         transform: translateY(0px) rotateX(0);
+    }
+}
+
+@keyframes far-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0)  
+    }
+    50% { transform: translateY(5px) 
+    }
+    100% { transform: translateY(0) 
     }
 }
