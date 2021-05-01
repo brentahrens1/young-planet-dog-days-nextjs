@@ -1,0 +1,25 @@
+@mixin left-tree {
+    width: 30%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    animation: slide-right 2s ease-in-out;
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
+}
+
+@mixin right-tree {
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    animation: slide-left 2s ease-in-out;
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+.dog {
+    &__left-tree {
+        @include left-tree;
+    }
+
+    &__right-tree {
+        @include right-tree;
+    }  
+
+    &__dog {
+        position: absolute;
+        position: absolute;
+        width: 30%;
+        left: 4.6%;
+        bottom: 25%;
+        z-index: -2;
+        opacity: 0;
+    
+        &.dog-out {
+            animation: slide-right 1s ease;
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__paper {
+        position: absolute;
+        width: 12%;
+        left: 30%;
+        bottom: 28%;
+        z-index: -3;
+        animation: paper-fall 2s linear;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__door {
+        position: absolute;
+        width: 85%;
+        bottom: 25.7%;
+        left: 7%;
+        z-index: -4;
+        animation: rise-up 2s ease;
+
+        img {
+            width: 100%;
+        }
+    }
+}

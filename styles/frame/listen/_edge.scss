@@ -1,0 +1,60 @@
+.edge {
+    &__left-tree {
+        @include left-tree;
+    }
+
+    &__right-tree {
+        @include right-tree;
+    }
+
+    &__water {
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        z-index: -2;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__mountains {
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: -2;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__car {
+        width: 60%;
+        position: absolute;
+        bottom: 27%;
+        left: 0%;
+        perspective: 700px;
+        z-index: -2;
+
+        img {
+            width: 100%;
+            animation: drive-up 5s ease;
+        }
+    }
+
+    &__plane {
+        position: absolute;
+        width: 10%;
+        top: 21%;
+        right: 0%;
+        z-index: -3;
+        animation: fly-left 22s linear infinite;
+
+        img {
+            width: 100%;
+        }
+    }
+}
