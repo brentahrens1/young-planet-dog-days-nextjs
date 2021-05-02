@@ -27,6 +27,8 @@ const Panel: React.FC<dogDaysProps> = (props) => {
 
     function storeSelected(e) {
         props.setIsSelected(e.target.innerText)
+        props.setIsSongSelected('')
+        props.setIsArtistSelected('')
     }
 
     return (

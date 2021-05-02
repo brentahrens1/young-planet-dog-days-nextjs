@@ -51,12 +51,14 @@ const CreditsPanel: React.FC<dogDaysProps> = (props) => {
             <div className="credits-panel__inner">
             {
                 panelBtns.map((btn, id) => {
-                    return <div className={`${btn.blockClass}`} onClick={selectArtist}>
-                                <div key={id} className={`icon ${btn.class} ${btn.blockClass}`}>
-                                    <img className={`${btn.blockClass}`} src={btn.img} alt={btn.name} />
-                                </div>
-                                <button className={`${btn.blockClass}`}>{btn.name}</button>
+                    return (
+                        <div className={`${btn.blockClass}`} onClick={selectArtist}>
+                            <div key={id} className={`icon ${btn.class} ${btn.blockClass}`}>
+                                <img className={`${btn.blockClass}`} src={btn.img} alt={btn.name} />
                             </div>
+                            <button className={`${btn.blockClass}`}>{btn.name}</button>
+                        </div>
+                    )
                 })
             }
             </div>

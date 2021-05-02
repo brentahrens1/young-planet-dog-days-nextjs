@@ -50,7 +50,14 @@ const Credits: React.FC<dogDaysProps> = (props) => {
                 <img src="/images/main/right-tree.png" alt="Young Planet | right tree" />
             </div>
             {
-                artists.map((artist, id) => {
+                props.isArtistSelected === '' ?
+                    <div className={`credits__box july`}>
+                        <h2 className="title">Dog Days</h2>
+                        <p className="name">Credits</p> 
+                        <p className="creds">July Porter</p>
+                    </div>
+                    :
+                    artists.map((artist, id) => {
                     return props.isArtistSelected === artist.blockClass ?
                     <div className={`credits__box ${artist.class}`} key={id}>
                         <h2 className="title">Dog Days</h2>
@@ -62,6 +69,11 @@ const Credits: React.FC<dogDaysProps> = (props) => {
                 })
             }
             {
+                props.isArtistSelected === '' ?
+                <div className={`credits__img july`}>
+                    <img src='/images/frame/credits/july.png' alt="July Porter" />
+                </div>
+                :
                 artists.map((artist, id) => {
                     return props.isArtistSelected === artist.blockClass ?
                     <div key={id} className={`credits__img ${artist.class}`}>
