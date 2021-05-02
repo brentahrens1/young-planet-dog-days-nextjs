@@ -17,6 +17,7 @@ const Home: React.FC = () => {
             <Panel 
                 isSelected={isSelected} 
                 setIsSelected={setIsSelected} 
+                isSongSelected={isSongSelected}
                 setIsSongSelected={setIsSongSelected} 
                 setIsArtistSelected={setIsArtistSelected} 
             />

@@ -6,6 +6,7 @@ import ContactPanel from './ContactPanel/ContactPanel'
 
 interface dogDaysProps {
     isSelected: string,
+    isSongSelected: string,
     setIsSongSelected: any,
     setIsArtistSelected: any
 }
@@ -18,7 +19,7 @@ const PanelWindow: React.FC<dogDaysProps> = (props) => {
                 <DefaultPanel />
                 :
                 props.isSelected === 'LISTEN' ?
-                <ListenPanel setIsSongSelected={props.setIsSongSelected}/>
+                <ListenPanel setIsSongSelected={props.setIsSongSelected} isSongSelected={props.isSongSelected} />
                 :
                 props.isSelected === 'DOWNLOAD' ?
                 <DownloadPanel />

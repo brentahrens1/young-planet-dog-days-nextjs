@@ -37,6 +37,7 @@ const Frame: React.FC<dogDaysProps> = (props) => {
             <div className="frame__img background">
                 <img src="/images/main/background.png" alt="Young Planet | Cover Frame" />
             </div>
+            <div className="backdrop" />
         </section>
     )
 }
