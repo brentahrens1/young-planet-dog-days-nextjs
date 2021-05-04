@@ -1,5 +1,6 @@
 interface dogDaysProps {
-    setIsArtistSelected: any
+    setIsArtistSelected: any,
+    isArtistSelected: string
 }
 
 const CreditsPanel: React.FC<dogDaysProps> = (props) => {
@@ -53,7 +54,7 @@ const CreditsPanel: React.FC<dogDaysProps> = (props) => {
                 panelBtns.map((btn, id) => {
                     return (
                         <div key={id} className={`${btn.blockClass}`} onClick={selectArtist}>
-                            <div className={`icon ${btn.class} ${btn.blockClass}`}>
+                            <div className={`icon ${btn.class} ${btn.blockClass} ${props.isArtistSelected === btn.blockClass ? "selected" : ""}`}>
                                 <img className={`${btn.blockClass}`} src={btn.img} alt={btn.name} />
                             </div>
                             <button className={`${btn.blockClass}`}>{btn.name}</button>

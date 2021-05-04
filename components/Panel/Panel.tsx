@@ -6,6 +6,7 @@ interface dogDaysProps {
     setIsSelected: any,
     isSongSelected: string
     setIsSongSelected: any,
+    isArtistSelected: string,
     setIsArtistSelected: any
 }
 
@@ -48,6 +49,7 @@ const Panel: React.FC<dogDaysProps> = (props) => {
                 isSelected={props.isSelected} 
                 isSongSelected={props.isSongSelected}
                 setIsSongSelected={props.setIsSongSelected} 
+                isArtistSelected={props.isArtistSelected}
                 setIsArtistSelected={props.setIsArtistSelected}
             />
         </section>

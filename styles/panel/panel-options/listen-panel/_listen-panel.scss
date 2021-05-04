@@ -18,7 +18,7 @@
             border-bottom: 2px solid $dogDaysBlack;
         }
 
-        .btn-flex {
+        .edge, .daze, .dog {
             margin-top: .4rem;
             display: flex;
             justify-content: space-between;
@@ -42,6 +42,7 @@
             text-align: left;
             font-size:1.2rem;
             position: relative;
+            outline: transparent;
             cursor: pointer;
         }
     }

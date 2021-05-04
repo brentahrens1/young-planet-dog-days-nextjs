@@ -13,13 +13,13 @@ const Listen: React.FC<dogDaysProps> = (props) => {
                 props.isSongSelected === '' ?
                 <Edge />
                 :
-                props.isSongSelected === 'Edge' ?
+                props.isSongSelected === 'edge' ?
                 <Edge />
                 :
-                props.isSongSelected === 'Daze' ?
+                props.isSongSelected === 'daze' ?
                 <Daze />
                 :
-                props. isSongSelected === 'Dog' ?
+                props. isSongSelected === 'dog' ?
                 <DogDays />
                 :
                 <Edge />

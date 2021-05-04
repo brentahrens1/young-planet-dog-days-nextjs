@@ -10,20 +10,23 @@ const ListenPanel: React.FC<dogDaysProps> = (props) => {
     const btns = [
         {
             text: '1. Edge of the World',
-            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>
+            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>,
+            class: 'edge'
         },
         {
             text: '2. In a Daze',
-            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>
+            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>,
+            class: 'daze'
         },
         {
             text: '3. Dog Days',
-            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>
+            soundcloud: <><iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div></>,
+            class: "dog"
         }
     ]
 
     function selectSong(e) {
-        props.setIsSongSelected(e.target.innerText)
+        props.setIsSongSelected(e.target.className)
     }
 
     return (
@@ -33,10 +36,10 @@ const ListenPanel: React.FC<dogDaysProps> = (props) => {
             {
                 btns.map((btn, id) => {
                     return (
-                        <div className="btn-flex">
-                            <button key={id} onClick={selectSong}>{btn.text}</button>
+                        <div onClick={selectSong} key={id} className={`${btn.class}`}>
+                            <button className={`${btn.class}`}>{btn.text}</button>
                             <div className="play-icon">
-                                <img src="/images/panel/listen/PLAY.png" alt="Young Planet | Play Button" />
+                                <img className={`${btn.class}`} src="/images/panel/listen/PLAY.png" alt="Young Planet | Play Button" />
                             </div>
                         </div>
                     )
@@ -46,9 +49,9 @@ const ListenPanel: React.FC<dogDaysProps> = (props) => {
             {
                 btns.map((btn, id) => {
                     return (
-                        <div>
+                        <div key={id}>
                             {
-                                props.isSongSelected === btn.text ?
+                                props.isSongSelected === btn.class ?
                                 <div className="soundcloud">
                                 {btn.soundcloud}
                                 </div>

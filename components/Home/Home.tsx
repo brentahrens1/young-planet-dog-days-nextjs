@@ -19,6 +19,7 @@ const Home: React.FC = () => {
                 setIsSelected={setIsSelected} 
                 isSongSelected={isSongSelected}
                 setIsSongSelected={setIsSongSelected} 
+                isArtistSelected={isArtistSelected}
                 setIsArtistSelected={setIsArtistSelected} 
             />
         </section>

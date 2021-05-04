@@ -28,6 +28,10 @@
             overflow: hidden;
             cursor: pointer;
 
+            &.selected {
+                opacity: .5;
+            }
+
             &.cidida {
                 img {
                     transform: translate(-59px, 17px);

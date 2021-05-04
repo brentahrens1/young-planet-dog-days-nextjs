@@ -8,6 +8,7 @@ interface dogDaysProps {
     isSelected: string,
     isSongSelected: string,
     setIsSongSelected: any,
+    isArtistSelected: string,
     setIsArtistSelected: any
 }
 
@@ -25,7 +26,7 @@ const PanelWindow: React.FC<dogDaysProps> = (props) => {
                 <DownloadPanel />
                 :
                 props.isSelected === 'CREDITS' ?
-                <CreditsPanel setIsArtistSelected={props.setIsArtistSelected} />
+                <CreditsPanel setIsArtistSelected={props.setIsArtistSelected} isArtistSelected={props.isArtistSelected} />
                 :
                 props.isSelected === 'CONTACT' ?
                 <ContactPanel />
