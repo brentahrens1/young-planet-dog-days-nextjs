@@ -21,3 +21,17 @@
         }
     }
 }
+
+@media (max-width: $tablet) {
+    .contact-panel {
+        &__inner {
+            flex-direction: row;
+            padding-right: 3rem;
+            padding-left: 3rem;
+
+            .icon {
+                width: 15%;
+            }
+        }
+    }
+}

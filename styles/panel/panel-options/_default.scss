@@ -9,3 +9,9 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: $tablet) {
+    .default-panel {
+        width: 60%;
+    }
+}
