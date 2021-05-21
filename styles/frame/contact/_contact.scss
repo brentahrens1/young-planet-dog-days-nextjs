@@ -80,3 +80,20 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .contact {
+    
+        &__crab {
+            animation: crab-up 25s linear infinite;
+        }
+    
+        &__bottle {
+            animation: bottle-float 25s linear infinite;
+        }
+    
+        &__plane {
+            animation: fly-right 48s linear infinite;
+        }
+    }
+}

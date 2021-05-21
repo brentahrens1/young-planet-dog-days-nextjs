@@ -139,3 +139,46 @@
 
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .daze {
+        &__spiral {
+            &.left {
+                animation: spiral-left 4s linear infinite, rise-up 3.5s ease;
+            }
+    
+            &.right {
+                animation: spiral-right 4s linear infinite, rise-up 3.5s ease;
+            }
+        }
+    
+        &__heart-one {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-two {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-three {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-four {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-five {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-six {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-seven {
+            animation: hearts 9s linear infinite;
+        }
+        &__heart-eight {
+            animation: hearts 9s linear infinite;
+        }
+    
+        &__july-eyes {
+            animation: rise-up 3.5s ease;
+        }
+    }
+}

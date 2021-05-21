@@ -62,3 +62,29 @@
         }
     }
 }
+
+// @media only screen and (max-width: $mobile) {
+//     .dog {    
+//         &__dog {
+//             &.dog-out {
+//                 animation: slide-right 3s ease;
+//             }
+    
+//             &.dog-back {
+//                 animation: far-left 5s ease;
+//             }
+//         }
+    
+//         &__paper {
+//             animation: paper-fall 4s linear;
+            
+//             &.paper-out {
+//                 animation: far-left 5s ease;
+//             }
+//         }
+    
+//         &__door {
+//             animation: rise-up 3s ease;
+//         }
+//     }
+// }

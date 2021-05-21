@@ -97,3 +97,56 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .credits-panel {
+        &__inner {
+    
+            .icon {
+                width: 80px;
+                height: 80px;
+
+                &.cidida {
+                    img {
+                        transform: translate(-64px, 10px);
+                        width: 140px;
+                    }
+                }
+                &.july {
+                    img {
+                        width: 90px;
+                        transform: translate(-12px, 12px);
+                    }
+                }
+                &.pj {
+                    img {
+                        width: 115px;
+                        transform: translate(-38px, 14px);
+                    }
+                }
+                &.dallas {
+                    img {
+                        width: 90px;
+                        transform: translate(1px, 7px);
+                    }
+                }
+                &.mitch {
+                    img {
+                        width: 90px;
+                        transform: translate(-6px, 10px);
+                    }
+                }
+                &.joe {
+                    img {
+                        width: 155px;
+                        transform: translate(-62px, 10px);
+                    }
+                }
+            }
+
+            button {
+                font-size: .7rem;
+            }
+        }
+    }
+}

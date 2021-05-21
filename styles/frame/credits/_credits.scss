@@ -84,3 +84,24 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .credits {
+    
+        &__box {
+            .title {
+                font-size: .7rem;
+                padding: .2rem;
+            }
+    
+            .name {
+                font-size: .7rem;
+            }
+    
+            .creds {
+                padding: .2rem;
+                font-size: .7rem;
+            }
+        }
+    }
+}

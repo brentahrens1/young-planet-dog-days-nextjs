@@ -58,3 +58,17 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .edge {
+        &__car {
+            img {
+                animation: drive-up 8s ease;
+            }
+        }
+    
+        &__plane {
+            animation: fly-left 67s linear infinite;
+        }
+    }
+}
