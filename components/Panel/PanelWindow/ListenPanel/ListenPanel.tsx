@@ -36,11 +36,23 @@ const ListenPanel: React.FC<dogDaysProps> = (props) => {
             {
                 btns.map((btn, id) => {
                     return (
-                        <div onClick={selectSong} key={id} className={`${btn.class}`}>
-                            <button className={`${btn.class}`}>{btn.text}</button>
-                            <div className="play-icon">
-                                <img className={`${btn.class}`} src="/images/panel/listen/PLAY.png" alt="Young Planet | Play Button" />
-                            </div>
+                        <div key={id}>
+                            {
+                                props.isSongSelected === btn.class ?
+                                <div onClick={selectSong} key={id} className={`${btn.class}`}>
+                                    <button className={`${btn.class}`}>{btn.text}</button>
+                                    <div className="play-text">
+                                        <p className={`${btn.class}`}>...playing</p>
+                                    </div>
+                                </div>
+                                :
+                                <div onClick={selectSong} key={id} className={`${btn.class}`}>
+                                    <button className={`${btn.class}`}>{btn.text}</button>
+                                    <div className="play-icon">
+                                        <img className={`${btn.class}`} src="/images/panel/listen/PLAY.png" alt="Young Planet | Play Button" />
+                                    </div>
+                                </div>
+                            }
                         </div>
                     )
                 })

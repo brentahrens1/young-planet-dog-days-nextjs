@@ -54,6 +54,11 @@
     }
 }
 
+@media only screen and (max-width: 510px) {
+    .frame {
+        min-height: 475px;
+    }
+}
 
 @media only screen and (max-width: 450px) {
     .frame {
