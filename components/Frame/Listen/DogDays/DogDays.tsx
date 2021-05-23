@@ -5,19 +5,35 @@ const DogDays: React.FC = () => {
     const [ isPaperOut, setPaperOut ] = useState<boolean>(false)
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIsDogOut(true)
-        }, 2500)
+        function dogInterval() {
+            if (window.innerWidth >= 800) {
+                setInterval(() => {
+                    setIsDogOut(true)
+                }, 2500)
+            } else if (window.innerWidth < 800) {
+                setInterval(() => {
+                    setIsDogOut(true)
+                }, 4500)
+            }
+        }
 
-        return () => clearInterval(interval)
+        dogInterval()
     }, [])
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setPaperOut(true)
-        }, 3500)
+        function interval() {
+            if (window.innerWidth >= 800) {
+                setInterval(() => {
+                    setPaperOut(true)
+                }, 3500)
+            } else if (window.innerWidth < 800) {
+                setInterval(() => {
+                    setPaperOut(true)
+                }, 5500)
+            }
+        }
 
-        return () => clearInterval(interval)
+        interval()
     }, [])
 
     return (
