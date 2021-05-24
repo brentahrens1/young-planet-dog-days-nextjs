@@ -9,7 +9,7 @@ const ContactPanel = () => {
                     <a href="https://www.twitter.com/spinyoungplanet" target="_blank"><img src="/images/panel/contact/twitter.png" alt="Young Planet | Twitter" /></a>
                 </div>
                 <div className="icon">
-                    <img src="/images/panel/contact/mail.png" alt="Young Planet | Email" />
+                    <a href="https://www.twitter.com/spinyoungplanet" target="_blank"><img src="/images/panel/contact/mail.png" alt="Young Planet | Email" /></a>
                 </div>
             </div>
         </div>
