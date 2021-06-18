@@ -114,3 +114,17 @@
     }
 }
 
+@media (max-height: 850px) and (max-width: 2000px) {
+
+    .panel {
+        &__btn-container {
+        
+            button {
+                font-size: 20px;
+                height: 53px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+

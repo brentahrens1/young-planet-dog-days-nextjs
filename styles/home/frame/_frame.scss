@@ -77,3 +77,9 @@
         min-height: 309px;
     }
 }
+
+@media (max-height: 850px) and (min-width: 1300px) {
+    .frame {
+        width: 63%;
+    }
+}
