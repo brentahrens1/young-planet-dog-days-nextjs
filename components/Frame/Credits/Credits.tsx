@@ -5,37 +5,37 @@ interface dogDaysProps {
 const Credits: React.FC<dogDaysProps> = (props) => {
     const artists = [
         {
-            name: 'CIDIDA',
+            name: 'Songwriter',
             img: '/images/frame/credits/cidida.png',
             class: 'cidida',
             blockClass: 'cidida-block'
         },
         {
-            name: 'JULY PORTER',
+            name: 'Producer • Engineer • Songwriter',
             img: '/images/frame/credits/july.png',
             class: 'july',
             blockClass: 'july-block'
         },
         {
-            name: 'HEMSTITCH MILL',
+            name: 'Cover Art',
             img: '/images/frame/credits/mitch.png',
             class: 'mitch',
             blockClass: 'mitch-block'
         },
         {
-            name: 'DALLAS JAMES',
+            name: 'Featured Artist',
             img: '/images/frame/credits/dallas.png',
             class: 'dallas',
             blockClass: 'dallas-block'
         },
         {
-            name: 'JOE LAMBERT',
+            name: 'Mastering Engineer',
             img: '/images/frame/credits/joe.png',
             class: 'joe',
             blockClass: 'joe-block'
         },
         {
-            name: 'PJ KATZ',
+            name: 'Producer',
             img: '/images/frame/credits/pj.png',
             class: 'pj',
             blockClass: 'pj-block'
@@ -54,7 +54,7 @@ const Credits: React.FC<dogDaysProps> = (props) => {
                     <div className={`credits__box july`}>
                         <h2 className="title">Dog Days</h2>
                         <p className="name">Credits</p> 
-                        <p className="creds">July Porter</p>
+                        <p className="creds">Producer • Engineer • Songwriter</p>
                     </div>
                     :
                     artists.map((artist, id) => {
