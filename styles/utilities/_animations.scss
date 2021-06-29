@@ -46,18 +46,22 @@
 @keyframes spiral-left {
     from {
         transform: rotate(0);
+        -webkit-transform: rotate(0);
     }
     to {
         transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
 @keyframes spiral-right {
     from {
         transform: rotate(0);
+        -webkit-transform: rotate(0);
     }
     to {
         transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
     }
 }
 
@@ -73,9 +77,11 @@
 @keyframes rise-up {
     from {
         transform: translateY(500px);
+        -webkit-transform: translateY(500px);
     }
     to {
         transform: translateY(0);
+        -webkit-transform: translateY(0);
     }
 }
 
