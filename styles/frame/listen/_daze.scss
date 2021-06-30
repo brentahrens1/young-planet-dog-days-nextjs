@@ -15,13 +15,13 @@
         &.left {
             bottom: 26%;
             right: 54%;
-            animation: spiral-left 2s linear infinite, rise-up 2s ease;
+            animation: rise-up 2s ease;
         }
 
         &.right {
             bottom: 27%;
             right: 46.8%;
-            animation: spiral-right 2s linear infinite, rise-up 2s ease;
+            animation: rise-up 2s ease;
         }
     }
 
