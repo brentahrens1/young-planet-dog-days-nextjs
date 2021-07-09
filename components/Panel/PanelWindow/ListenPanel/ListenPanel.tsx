@@ -74,6 +74,9 @@ const ListenPanel: React.FC<dogDaysProps> = (props) => {
                     )
                 })
             }
+            <div className="soundcloud-mobile">
+                <iframe width="100%" height="250" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/655015961&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div><a href="https://soundcloud.com/spinyoungplanet" title="Young_Planet" target="_blank">Young_Planet</a> · <a href="https://soundcloud.com/spinyoungplanet/day-one" title="Day One" target="_blank">Day One</a></div>
+            </div>
         </div>
     )
 }
